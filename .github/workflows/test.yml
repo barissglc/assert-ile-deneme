@@ -12,7 +12,7 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
         run: |
-           run: gcc -o unit unit.c
+          gcc -o unit unit.c
           git config user.name mregungor
           git config user.email emre.gungor@ksbu.edu.tr
           git add .
