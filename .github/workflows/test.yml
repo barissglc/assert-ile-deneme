@@ -3,6 +3,9 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -16,4 +19,4 @@ jobs:
           git config user.email emre.gungor@ksbu.edu.tr
           git add .
           git commit -m "generated"
-          git push origin main
+          git push
